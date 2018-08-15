@@ -1,1 +1,13 @@
+yum_config.sh
+About Scipt:  yum_config.sh is script used to configure yum repositories.
+
+Testing:      It is tested on Linux 6 and Linux 7.
+
+Prerequisites:Copy "Packages" folder from Linux ISO to /root/Desktop/
+              Give execute permission to yum_config.sh before execution
+
+Working:      It starts by installing createrepo command via rpm by resolving it's dependent dependency. Once repo commands 
+              get installed it will create repomd.xml (rpm packages metadata), than it will create new.repo file inside /etc/yum.repos.d. 
+              and configure it use repomd.xml folder for yum repo file. Once it configures new.repo it will update repo file and list 
+              packages count which are inside new.repo
 
